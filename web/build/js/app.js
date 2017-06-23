@@ -10670,7 +10670,7 @@ _vue2.default.use(VueCookie);
 
 /* ----- CONFIG ----- */
 
-var FOLDER_PATH = '_export/';
+var FOLDER_PATH = 'media/';
 var DEFAULT_SORT = 'asc';
 var PIC_PATH = 'img/cover.png';
 

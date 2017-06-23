@@ -30,7 +30,7 @@ class AudioList
      *
      * @return array
      */
-    protected function listFiles($path, $filter=['mp3', 'wav']) {
+    protected function listFiles($path, $filter=['mp3', 'wav', 'ogg']) {
         $files = [];
         $pathFiles = scandir($path);
 

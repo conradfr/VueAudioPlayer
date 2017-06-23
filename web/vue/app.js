@@ -10,7 +10,7 @@ Vue.use(VueCookie);
 
 /* ----- CONFIG ----- */
 
-const FOLDER_PATH = '_export/';
+const FOLDER_PATH = 'media/';
 const DEFAULT_SORT = 'asc';
 const PIC_PATH = 'img/cover.png';
 
