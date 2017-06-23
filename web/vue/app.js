@@ -133,6 +133,7 @@ const repFolderList = Vue.component('repFolderList', {
     }
 });
 
+// TrackList
 const repTrackList = Vue.component('repTrackList', {
     template: '#repTrackListTpl',
     computed: Vuex.mapState({
@@ -173,11 +174,12 @@ const repPlayer = Vue.component('repPlayer', {
 
             let player = this.control = new APlayer({
                 mode: 'order',
-                music: val
+                music: val,
+                preload: 'auto'
             });
 
             player.play();
-        },
+        }
     }
 });
 

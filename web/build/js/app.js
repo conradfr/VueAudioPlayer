@@ -10810,6 +10810,7 @@ var repFolderList = _vue2.default.component('repFolderList', {
     }
 });
 
+// TrackList
 var repTrackList = _vue2.default.component('repTrackList', {
     template: '#repTrackListTpl',
     computed: _vuex2.default.mapState({
@@ -10860,7 +10861,8 @@ var repPlayer = _vue2.default.component('repPlayer', {
 
             var player = this.control = new _aplayer2.default({
                 mode: 'order',
-                music: val
+                music: val,
+                preload: 'auto'
             });
 
             player.play();
