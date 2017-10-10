@@ -7311,7 +7311,7 @@ fieldset[disabled] .btn-danger.active {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .app-panel .test-panel {
+  .app-panel .folder-panel {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -7337,6 +7337,19 @@ fieldset[disabled] .btn-danger.active {
 }
 .app-panel .folder-name {
   padding-left: 10px;
+}
+.app-panel .icon-copy {
+  position: relative;
+  top: 50%;
+  transform: translateY(20%);
+}
+.app-panel .fadecopy-enter-active,
+.app-panel .fadecopy-leave-active {
+  transition: opacity 0.4s;
+}
+.app-panel .fadecopy-enter,
+.app-panel .fadecopy-leave-to {
+  opacity: 0;
 }
 .audio-player h5 {
   padding: 8px 0 7px 10px;

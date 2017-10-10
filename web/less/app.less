@@ -37,7 +37,7 @@
   }
 
   @media  (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-    .test-panel {
+    .folder-panel {
       position: fixed;
       top: 0;
       bottom: 0;
@@ -67,6 +67,19 @@
 
   .folder-name {
     padding-left: 10px;
+  }
+
+  .icon-copy {
+    position: relative;
+    top:50%;
+    transform: translateY(20%);
+  }
+
+  .fadecopy-enter-active, .fadecopy-leave-active {
+    transition: opacity .4s
+  }
+  .fadecopy-enter, .fadecopy-leave-to {
+    opacity: 0
   }
 }
 

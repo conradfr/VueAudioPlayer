@@ -43,7 +43,7 @@ class AudioList
                 continue;
             }
 
-            $files[md5($path . $file . rand())] = ['file' => $file, 'duration' => ''];
+            $files[md5($path . $file)] = ['file' => $file, 'duration' => ''];
         }
 
         return $files;
