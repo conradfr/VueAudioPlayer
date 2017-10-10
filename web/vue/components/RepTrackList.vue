@@ -6,7 +6,7 @@
                 <th class="folder-name" width="75%">Files</th>
                 <th width="25%" class="text-right">
                     <transition name="fadecopy">
-                        <span v-if="linkCopy === folder.dir" class="icon-copy glyphicon glyphicon-ok" aria-hidden="true"></span>
+                        <span v-if="folderSelected && linkCopy === folder.dir" class="icon-copy glyphicon glyphicon-ok" aria-hidden="true"></span>
                     </transition>
                     <button type="button" class="btn btn-default btn-xs" v-if="folderSelected && Object.keys(folder.files).length > 0"
                             v-clipboard="copyFolderAction" :key="folder.dir" @success="handleSuccess(folder.dir)" title="Copy link to clipboard">
@@ -29,7 +29,7 @@
                 <td class="folder-name clickable" >{{ entry.file }}</td>
                 <td class="text-right clickable">
                     <transition name="fadecopy">
-                        <span v-if="linkCopy === key" class="icon-copy glyphicon glyphicon-ok" aria-hidden="true"></span>
+                        <span v-if="folderSelected && linkCopy === key" class="icon-copy glyphicon glyphicon-ok" aria-hidden="true"></span>
                     </transition>
                     <button type="button" class="btn btn-default btn-xs" v-if="folderSelected && Object.keys(folder.files).length > 0"
                             v-on:click.stop="" v-clipboard="copyAction(key)" :key="key" @success="handleSuccess(key)" title="Copy link to clipboard">
@@ -51,11 +51,6 @@ import { mapState } from 'vuex'
 export default {
     data() {
         return {
-/*            copyLink: () => {
-                const folderPart =
-                return `${window.location}`
-            },*/
-            copyDirLink: 'copy data',
             linkCopy: null
         }
     },
