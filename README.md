@@ -3,8 +3,6 @@ VueAudioPlayer
 
 Just a VueJs learning project, a responsive audio player.
 
-Not production quality code.
-
 [DEMO](http://vueaudioplayer.funkybits.fr)
 
 ![Image of Yaktocat](web/img/example.png)
@@ -23,3 +21,7 @@ Build & run (dev)
 2. npm install
 3. npm run dev
 4. php bin/console server:run
+
+Build & run (prod)
+--------------
+3. npm run build
