@@ -1,7 +1,7 @@
 FROM php:7.4.14-fpm
 
 # Copy composer.lock and composer.json
-COPY ./composer.lock ./composer.json /var/www/
+# COPY ./composer.lock ./composer.json /var/www/
 RUN mkdir -p /scripts
 COPY ./docker/docker-entry.sh /scripts
 
@@ -11,6 +11,11 @@ WORKDIR /var/www
 # Copy existing application directory
 COPY ./ /var/www/
 RUN ls /var/www
+
+RUN mkdir -p /var/www/var/
+# RUN chmod -R 777 /var/www/var
+RUN chown -R www-data:www-data /var/www/
+# RUN chown -R www:www /var/www/html
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -41,8 +46,8 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --no-dev --no-interaction -o
 # Add user for laravel application
-RUN groupadd -g 1000 www
-RUN useradd -u 1000 -ms /bin/bash -g www www
+#RUN groupadd -g 1000 www
+#RUN useradd -u 1000 -ms /bin/bash -g www www
 
 
 COPY ./docker/app.conf /etc/nginx/conf.d/app.conf
