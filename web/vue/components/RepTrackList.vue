@@ -3,8 +3,8 @@
         <table class="table table-striped table-condensed table-hover">
             <thead>
             <tr>
-                <th class="folder-name" width="75%">Files</th>
-                <th width="25%" class="text-right">
+                <th class="folder-name" width="70%">Files</th>
+                <th width="30%" class="text-right">
                     <transition name="fadecopy">
                         <span v-if="folderSelected && linkCopy === folder.dir" class="icon-copy glyphicon glyphicon-ok" aria-hidden="true"></span>
                     </transition>
