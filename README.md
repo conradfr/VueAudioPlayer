@@ -3,7 +3,7 @@ VueAudioPlayer
 
 Just a VueJs learning project, a responsive audio player.
 
-[DEMO](http://vueaudioplayer.funkybits.fr)
+(deprecated, replaced by [VueAudioPlayer2](https://github.com/conradfr/VueAudioPlayer2)
 
 ![Image of Yaktocat](web/img/example.png)
 
